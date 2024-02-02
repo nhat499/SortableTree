@@ -10,12 +10,12 @@
 
     // Added
     "jsx": "react",
-    "module": "Node16",
+    "module": "ESNext",
     "declaration": true,
     "declarationDir": "types",
     "sourceMap": true,
     "outDir": "dist",
-    "moduleResolution": "Node16",
+    "moduleResolution": "Node10",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
   }
