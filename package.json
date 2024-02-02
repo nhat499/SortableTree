@@ -1,5 +1,8 @@
 {
-  "name": "sortabletree",
+  "name": "@nhat499/sortable-tree",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/nhat499"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
