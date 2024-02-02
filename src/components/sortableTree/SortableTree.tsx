@@ -60,7 +60,7 @@ const SortableTree = <TData extends object>({
   dragStyle,
   memoKeys,
 }: SortableTreeProps<TData>) => {
-  const moveNode = React.useCallback(
+  const moveNode = useCallback(
     (dragId: string, hoverId: string) => {
       setTreeData((prevTree) => {
         const treeDataCopy: TreeDataProps<TData> = structuredClone(prevTree);
@@ -97,7 +97,7 @@ const SortableTree = <TData extends object>({
     [onMoveNode, setTreeData]
   );
 
-  const nestNode = React.useCallback(
+  const nestNode = useCallback(
     (dragId: string, hoverId: string, index: number | undefined = 0) => {
       setTreeData((prevTree) => {
         const treeDataCopy: TreeDataProps<TData> = structuredClone(prevTree);
@@ -127,7 +127,7 @@ const SortableTree = <TData extends object>({
   );
 
   // find find parentnode and nodeIndex
-  const findNodePlacement = React.useCallback(
+  const findNodePlacement = useCallback(
     (nodeId: string) => {
       return findNodeIndex(nodeId, treeData);
     },
