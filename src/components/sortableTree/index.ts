@@ -1,1 +1,1 @@
-export { default, TreeDataProps } from "./SortableTree";
+export { default, type TreeDataProps } from "./SortableTree";

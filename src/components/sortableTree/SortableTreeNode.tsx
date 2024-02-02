@@ -118,12 +118,6 @@ const SortableTreeNode = <TData,>({
           return;
         }
 
-        if (
-          Math.abs(monitor.getInitialSourceClientOffset()?.y as number) <
-          dropRef.current.clientHeight
-        ) {
-          return;
-        }
         const hoverBoundingRect = dropRef.current.getBoundingClientRect();
         const x = monitor.getSourceClientOffset()?.x as number;
 
