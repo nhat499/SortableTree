@@ -1,12 +1,11 @@
-import { Box, Button, Icon, IconButton } from "@mui/material";
+import React from "react";
+import { Box, Button } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import SortableTree, { TreeDataProps } from ".";
-import React from "react";
 
-// import { DownIcon } from "../SvgIcon";
+import SortableTree, { TreeDataProps } from "./SortableTree";
 
 const meta: Meta<typeof SortableTree> = {
   component: SortableTree,

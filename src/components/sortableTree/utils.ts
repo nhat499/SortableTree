@@ -1,10 +1,10 @@
 import { TreeDataProps } from "./SortableTree";
 
-export interface FoundNode<TData> {
+export type FoundNode<TData> = {
   parentNode: TreeDataProps<TData>;
   index: number;
   node: TreeDataProps<TData>;
-}
+};
 
 // find 2 node: drag and hover
 export const findNodeRecursion = <TData>(

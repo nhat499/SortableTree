@@ -1,19 +1,19 @@
+import React from "react";
 import { Box } from "@mui/material";
 import { ReactNode, useCallback, useMemo, useState } from "react";
 import SortableTreeNode, {
   RenderNodeDisplayProps,
   SortableTreeNodeProps,
-} from "./SortableTreeNode";
+} from "./SortableTreeNode.js";
 import { FoundNode, findNodeIndex, findNodeRecursion } from "./utils";
-import React from "react";
 
-export interface TreeDataProps<TData> {
+export type TreeDataProps<TData> = {
   data: TData;
   id: string;
   children: Array<TreeDataProps<TData>>;
-}
+};
 
-export interface SortableTreeProps<TData extends object> {
+export type SortableTreeProps<TData extends object> = {
   /** Whether the tree should allow nesting of tree nodes. */
   allowNesting?: boolean;
   /** Whether the tree is in an editable state or read-only state. */
@@ -44,7 +44,7 @@ export interface SortableTreeProps<TData extends object> {
   dragStyle?: SortableTreeNodeProps<TData>["dragStyle"];
   /** An array of keys corresponding to keys in the tree data that should be used for memoization. */
   memoKeys?: TreeNodeProps<TData>["memoKeys"];
-}
+};
 
 const SortableTree = <TData extends object>({
   allowNesting = false,
